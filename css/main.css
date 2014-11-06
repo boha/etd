@@ -1,13 +1,3 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
-
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -49,101 +39,78 @@ textarea {
     resize: vertical;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
+/* === ETD STYLES === */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+	background: #efefef;
+    font: 14px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
+a {
+	color: #666;
 }
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
-.header-container {
-    border-bottom: 20px solid #e44d26;
+.hero-container {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
+.hero-container img {
+	width: 100%;
+	max-width: 1600px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 
-.header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
+#logo {
+	width: 100%;
+	position: absolute;
+	top: 40px;
 }
 
-.title {
-    color: white;
+#logo img {
+	width: 250px;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -125px;
 }
 
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
+img.hero {
+	margin: 0 auto;
+	height: 385px;
 }
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: #e44d26;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ==============
-    MOBILE: Main
-   ============== */
 
 .main {
-    padding: 30px 0;
+	text-align: center;
+	position: relative;
+	top: -5px;
 }
 
-.main article h1 {
-    font-size: 2em;
+.main * {
+	width: 75%;
+	min-width: 220px;
+	margin: 0 auto;
 }
 
-.main aside {
-    color: white;
-    padding: 0px 5% 10px;
+.main p {
+	margin-top: 20px;
 }
 
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
+h1 {
+	font-size: 1.5em;
+	line-height: 1.3em;
+	color: #356491;
+}
+
+p {
+	font-size: .8em;
+	color: #222;
+	line-height: 1.7em;
 }
 
 /* ===============
@@ -155,61 +122,8 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
 
 @media only screen and (min-width: 768px) {
 
@@ -217,49 +131,68 @@ nav a:hover {
     WIDE: CSS3 Effects
    ==================== */
 
+	#logo {
+		width: 100%;
+		position: absolute;
+		top: 128px;
+	}
+
+	#logo img {
+		width: 302px;
+		margin: 0 auto;
+		position: absolute;
+		left: 50%;
+		margin-left: -151px;
+	}
+
     .header-container,
     .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
     }
 
-/* ============
-    WIDE: Menu
-   ============ */
+	h1 {
+		font-size: 2em;
+		line-height: 1.3em;
+		color: #356491;
+	}
 
-    .title {
-        float: left;
-    }
+	p {
+		font-size: 1em;
+		color: #222;
+		line-height: 1.7em;
+	}
+	
+	.main {
+		top: -15px;
+	}
+	
+	.main * {
+		width: 550px;
+		margin: 0 auto;
+	}
 
-    nav {
-        float: right;
-        width: 38%;
-    }
 
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1020px) {
 
 /* ===============
     Maximal Width
    =============== */
 
+	#logo {
+		top: 200px;
+	}
+	
+	#logo img {
+		width: 420px;
+		margin-left: -210px;
+	}
+
+	
+	.main {
+		top: -20px;
+	}
+
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1020px;
         margin: 0 auto;
     }
 }

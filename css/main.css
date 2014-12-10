@@ -1,3 +1,7 @@
+* {
+  border: 1px solid #f0f;
+}
+
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -39,11 +43,13 @@ textarea {
     resize: vertical;
 }
 
-/* === ETD STYLES === */
+/* ==========================================================================
+ETD Styles
+========================================================================== */
 
 body {
 	background: #efefef;
-    font: 14px;
+  font: 14px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -51,38 +57,53 @@ a {
 	color: #666;
 }
 
-.hero-container {
-	width: 100%;
-	height: auto;
-	display: block;
-	margin: 0 auto;
+#nav-container {
+  width: 100%;
+  height: 65px;
+  background: #444;
 }
 
-.hero-container img {
-	width: 100%;
-	max-width: 1600px;
-	height: auto;
-	display: block;
-	margin: 0 auto;
+#nav-container a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #efefef;
 }
 
 #logo {
-	width: 100%;
 	position: absolute;
-	top: 40px;
+	top: 16px;
+  left: 32px;
 }
 
 #logo img {
-	width: 250px;
-	margin: 0 auto;
-	position: absolute;
-	left: 50%;
-	margin-left: -125px;
+	width: 160px;
 }
 
-img.hero {
-	margin: 0 auto;
-	height: 385px;
+#nav-container #donate {
+  position: absolute;
+  right: 32px;
+  top: 16px;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+#nav {
+  display: none;
+  float: right;
+  margin: 16px 160px 0 0;
+}
+
+#nav a {
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+#masthead {
+  width: 100%;
+  height: 429px;
+  background: url('../img/masthead_1020.jpg') no-repeat fixed;
+  background-position: right 65px;
 }
 
 .main {
@@ -107,9 +128,16 @@ h1 {
 	color: #356491;
 }
 
+h3 {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 2em;
+  color: #666;
+}
+
 p {
 	font-size: .8em;
-	color: #222;
+	color: #666;
 	line-height: 1.7em;
 }
 
@@ -127,27 +155,17 @@ p {
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
+  #logo img {
+    margin-left: 32px;
+  }
 
-	#logo {
-		width: 100%;
-		position: absolute;
-		top: 128px;
-	}
+  #nav {
+    display: block;
+  }
 
-	#logo img {
-		width: 302px;
-		margin: 0 auto;
-		position: absolute;
-		left: 50%;
-		margin-left: -151px;
-	}
-
-    .header-container,
-    .main aside {
-    }
+  .header-container,
+  .main aside {
+  }
 
 	h1 {
 		font-size: 2em;
@@ -160,11 +178,11 @@ p {
 		color: #222;
 		line-height: 1.7em;
 	}
-	
+
 	.main {
 		top: -15px;
 	}
-	
+
 	.main * {
 		width: 550px;
 		margin: 0 auto;
@@ -177,16 +195,6 @@ p {
     Maximal Width
    =============== */
 
-	#logo {
-		top: 200px;
-	}
-	
-	#logo img {
-		width: 420px;
-		margin-left: -210px;
-	}
-
-	
 	.main {
 		top: -20px;
 	}

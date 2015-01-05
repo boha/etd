@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/helper.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
 
@@ -18,11 +20,11 @@
       <a id="logo" href="#">
         <img src="img/etd_logo_800.png" alt="Earn the Day" />
       </a>
-      <a href="#" id="donate">DONATE</a>
+      <a href="mailto:contact@earntheday.org?subject=Donation Inquiry" id="donate">Donate</a>
       <div id="nav">
-        <a href="#">About</a>
-        <a href="#">How to Help</a>
-        <a href="#">Events</a>
+        <a href="#intro">About</a>
+        <a href="#events">Events</a>
+        <a href="#help">How to Help</a>
       </div>
     </div> <!-- #nav-container -->
 
@@ -31,14 +33,51 @@
     </div> <!-- #hero-container -->
 
     <div class="main-container">
-      <div class="main wrapper clearfix">
+      <a name="intro"></a>
+      <div class="intro wrapper clearfix">
         <h3>Earn the Day is a Bay Area-based nonprofit created to build a trend of achievement within our community’s deserving youth, by rewarding personal improvement with uncommon and exciting outdoor experiences.</h3>
-			  <p><a href="mailto:contact@earntheday.org">contact@earntheday.org</a></p>
-      </div> <!-- #main -->
-    </div> <!-- #main-container -->
+      </div> <!-- .intro -->
 
-    <div class="footer-container">
+      <div class="events wrapper clearfix">
+        <a name="events"></a>
+        <div id="surfday2014">
+          <div class="partner-desc">
+            <h1>Surf Day 2014</h1>
+            <p>On September 30, we partnered withBig Dog Surf Camp, Surfrider Foundation, and the Boys and Girls Club of San Francisco to take twenty kids out for a day of surf and ocean safety instruction.</p>
+          </div>
+          <div class="partner-logo">
+            <img src="img/surfrider_logo.png" alt="Surfrider Foundation of San Francisco" />
+            <img src="img/bgc_logo.png" alt="Boys and Girls Clubs of San Francisco" />
+          </div>
+        </div> <!-- .surfday2014 -->
+
+        <div class="gallery">
+          <img src="img/sd14_gallery_1.jpg" alt="" />
+        </div> <!-- .gallery -->
+      </div>
+
+      <div class="help wrapper clearfix">
+        <a name="help"></a>
+        <div class="help-img">
+          <img src="img/help.jpg" alt="" />
+        </div>
+
+        <div class="help-donate">
+          <h1>How to Help</h1>
+          <p>We rely on the contributions of corporations and individuals who believe that everybody deserves to be rewarded for their effort.</p>
+          <img src="img/divider.png" class="divider" alt="~" />
+          <a class="cta" href="mailto:contact@earntheday.org?subject=Donation Inquiry">Donate Now</a>
+        </div>
+      </div>
+
+    </div> <!-- .main-container -->
+
+    <div id="footer-container" class="clearfix">
       <footer class="wrapper">
+        <a href="#">Facebook</a>
+        <a href="#intro">About</a>
+        <a href="#events">Events</a>
+        <a href="#help">How to Help</a>
       </footer>
     </div>
 

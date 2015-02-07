@@ -6,12 +6,11 @@
     <title>Earn the Day</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/helper.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/helper.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
 
   <body>
@@ -43,7 +42,7 @@
         <div id="surfday2014">
           <div class="partner-desc">
             <h1>Surf Day 2014</h1>
-            <p>On September 30, we partnered withBig Dog Surf Camp, Surfrider Foundation, and the Boys and Girls Club of San Francisco to take twenty kids out for a day of surf and ocean safety instruction.</p>
+            <p>On September 30, we partnered with Big Dog Surf Camp, Surfrider Foundation, and the Boys &amp; Girls Club of San Francisco to take twenty kids out for a day of surf and ocean safety instruction.</p>
           </div>
           <div class="partner-logo">
             <img src="img/surfrider_logo.png" alt="Surfrider Foundation of San Francisco" />
@@ -52,8 +51,16 @@
         </div> <!-- .surfday2014 -->
 
         <div class="gallery">
+          <img src="img/sd14_gallery_8.jpg" alt="" />
+          <img src="img/sd14_gallery_7.jpg" alt="" />
+          <img src="img/sd14_gallery_6.jpg" alt="" />
+          <img src="img/sd14_gallery_5.jpg" alt="" />
+          <img src="img/sd14_gallery_4.jpg" alt="" />
+          <img src="img/sd14_gallery_3.jpg" alt="" />
+          <img src="img/sd14_gallery_2.jpg" alt="" />
           <img src="img/sd14_gallery_1.jpg" alt="" />
-        </div> <!-- .gallery -->
+        </div>
+
       </div>
 
       <div class="help wrapper clearfix">
@@ -74,16 +81,27 @@
 
     <div id="footer-container" class="clearfix">
       <footer class="wrapper">
-        <a href="#">Facebook</a>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
         <a href="#intro">About</a>
         <a href="#events">Events</a>
         <a href="#help">How to Help</a>
       </footer>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/vendor/fadeSlideShow.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
   </body>
 </html>

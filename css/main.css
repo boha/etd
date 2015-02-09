@@ -32,6 +32,15 @@ h1 {
   color: #444;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-family: Signika, sans-serif;
+  font-size: 1em;
+  line-height: 0;
+  font-weight: 300;
+  letter-spacing: .08em;
+}
+
 h3 {
   font-size: 1.1em;
   line-height: 2em;
@@ -52,39 +61,6 @@ p {
   line-height: 1.7em;
   font-weight: 300;
   color: #666;
-}
-
-.input {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: none;
-  border: 2px solid #444; !important
-  white-space: nowrap;
-
-}
-
-.input:hover {
-  border-color: #666;
-  color: #666;
-}
-
-.input.cta {
-  font-size: 1.4em;
-  font-weight: 600;
-  letter-spacing: .1em;
-  padding: 15px 25px;
-}
-
-input.input {
-  font-size: 0.9em;
-  font-weight: 600;
-  letter-spacing: .1em;
-  padding: 10px 18px;
-}
-
-input[type=text].input {
-  width: 160px;
 }
 
 .divider {
@@ -203,10 +179,9 @@ c}
   width: 100%;
 }
 
-.block-center,
 .team {
   text-align: center;
-  padding-top: 80px;
+  padding: 40px 0;
   font-size: .8em;
   line-height: 1.7em;
   font-weight: 300;
@@ -217,10 +192,6 @@ c}
   width: 100%;
   max-width: 500px;
   padding: 20px 0 20px;
-}
-
-.help {
-  padding: 80px 0 0 0z;
 }
 
 .help-donate {
@@ -240,13 +211,58 @@ c}
   margin: 0 auto;
 }
 
-.email {
-  padding-bottom: 80px;
+.cta {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  letter-spacing: .1em;
+}
+
+a.cta {
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 15px 25px;
+  border: 2px solid #444; !important
+}
+
+a.cta:hover {
+  border-color: #666;
+  color: #666;
+}
+
+input {
+  font-size: 0.8em;
+  background: #efefef;
+}
+
+input.cta, input.input {
+  padding: 9px 12px;
+  color: #efefef;
+}
+
+input.cta {
+  border: 1px solid #666; !important
+}
+
+input.cta:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+input[type=text].input {
+  width: 180px;
+}
+
+#footer-container h2 {
+  color: #efefef;
 }
 
 #footer-container {
   background-color: #444;
-  padding: 40px 0;
+  margin: 40px 0 0;
+  padding: 20px 0;
   min-height: 80px;
   text-align: center;
 }

@@ -32,7 +32,7 @@
       <div id="masthead" class="clearfix"></div>
     </div> <!-- #hero-container -->
 
-    <div class="main-container">
+    <div class="main-container clearfix">
       <a name="intro" class="anchor"></a>
       <div class="intro wrapper clearfix">
         <h3>Earn the Day is a Bay Area-based nonprofit created to build a trend of achievement within our community’s deserving youth, by rewarding personal improvement with uncommon and exciting outdoor experiences.</h3>
@@ -87,23 +87,23 @@
           <h1>How to Help</h1>
           <p>We rely on the contributions of corporations and individuals who believe that everybody deserves to be rewarded for their effort.</p>
           <img src="img/divider.png" class="divider" alt="~" />
-          <a class="cta input" href="mailto:contact@earntheday.org?subject=Donation Inquiry">Donate Now</a>
+          <a class="cta" href="mailto:contact@earntheday.org?subject=Donation Inquiry">Donate Now</a>
         </div>
-      </div>
-
-      <div class="email wrapper clearfix block-center">
-        <a name="email" class="anchor"></a>
-        <h1>Stay in touch</h1>
-        <form id="form-email" action="/email" method="post">
-          <input type="text" name="email" class="input" placeholder="Email address" />
-          <input type="submit" name="submit" value="Subscribe" class="input" />
-        </form>
       </div>
 
     </div> <!-- .main-container -->
 
     <div id="footer-container" class="clearfix">
       <footer class="wrapper">
+
+        <div class="email clearfix">
+          <h2>Stay in touch:  </h2>
+          <form id="form-email" action="/email" method="post">
+            <input type="text" name="email" class="input" placeholder="EMAIL ADDRESS" />
+            <input type="submit" name="submit" value="Subscribe" class="cta" />
+          </form>
+        </div>
+
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
         <a href="#intro">About</a>
         <a href="#events">Events</a>

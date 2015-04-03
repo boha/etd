@@ -6,6 +6,7 @@
     <title>Earn the Day</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="/static/css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <link rel="stylesheet" type="text/css" href="/static/css/helper.css">
@@ -43,7 +44,7 @@
         <div id="surfday2014">
           <div class="partner-desc">
             <h1>Surf Day 2014</h1>
-            <p>On September 30, we partnered with Big Dog Surf Camp, Surfrider Foundation, and the Boys &amp; Girls Club of San Francisco to take twenty kids out for a day of surf and ocean safety instruction.</p>
+            <p>On September 30, we partnered with Big Dog Surf Camp, Surfrider Foundation, and the Boys &amp; Girls Club of San Francisco to take twenty kids out for a day of surf and ocean safety instruction.</p>
           </div>
           <div class="partner-logo">
             <img src="/static/img/surfrider_logo.png" alt="Surfrider Foundation of San Francisco" />
@@ -94,9 +95,11 @@
       <div class="email wrapper clearfix block-center">
         <a name="email" class="anchor"></a>
         <h1>Stay in touch</h1>
-        <form id="form-email" action="/email" method="post">
-          <input type="text" name="email" class="input" placeholder="Email address" />
+        <form id="form-email" action="/subscribe" method="post">
+          {{ email_form.csrf_token }}
+          {{ email_form.email(class="input", placeholder="Email address") }}
           <input type="submit" name="submit" value="Subscribe" class="input" />
+          <div class="response-msg"></div>
         </form>
       </div>
 

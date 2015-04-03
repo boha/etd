@@ -6,18 +6,26 @@ onSubmitForm = function(e) {
   e.preventDefault();
 
   // Extract email address
-  $form = $(e.currentTarget);
-  emailText = $form.find('input[name=email]').val();
+  var $form     = $(e.currentTarget),
+      emailText = $form.find('input[name=email]').val();
   console.debug("ok, we got " + emailText);
 
   // Send to server
+  var csrftoken = $('meta[name=csrf-token]').attr('content');
+  $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+      if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+      }
+    }
+  });
   // TK
 
   // Show confirmation
-  $form.append("<p class=\"notice\">Thanks, <strong>" + emailText + "</strong>!</p>");
+  $form.find(".response-msg").html("<p class=\"notice\">Thanks, <strong>" + emailText + "</strong>!</p>");
 };
 
 jQuery(document).ready(function(){
   jQuery('.gallery').fadeSlideShow();
-  $('#form-email').on('submit', onSubmitForm);
+  // $('#form-email').on('submit', onSubmitForm);
 });

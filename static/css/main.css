@@ -83,8 +83,8 @@ input.input {
   padding: 10px 18px;
 }
 
-input[type=text].input {
-  width: 160px;
+input[type=email].input {
+  width: 190px; /* (submit button 118px) * 1.613 */
 }
 
 .divider {

@@ -56,6 +56,11 @@ h4 {
   letter-spacing: .1em;
 }
 
+h5 {
+  font-size: .8em;
+  font-weight: 300;
+}
+
 p {
   font-size: .8em;
   line-height: 1.7em;
@@ -125,8 +130,28 @@ p {
 
 #masthead {
   height: 429px;
+  width: 100%;
   background: url('../img/masthead_1020.jpg') no-repeat;
   background-position: right -80px center;
+  text-align: center;
+}
+
+#masthead .cta {
+  margin: 280px auto 0;
+  background-color: rgba(239,239,239,0.7);
+}
+
+#masthead_video {
+  display: none;
+  height: 429px;
+}
+
+#masthead_video iframe {
+  display: block;
+  max-width: 1020px;
+  height: 429px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .intro {
@@ -231,6 +256,10 @@ a.cta:hover {
   border-color: #666;
   color: #666;
 }
+
+/*.email {
+  display: none;
+}*/
 
 input {
   font-size: 0.8em;

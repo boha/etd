@@ -21,3 +21,9 @@ jQuery(document).ready(function(){
   jQuery('.gallery').fadeSlideShow();
   $('#form-email').on('submit', onSubmitForm);
 });
+
+jQuery('#masthead_cta').click(function() {
+  jQuery('#masthead').replaceWith($('#masthead_video').show());
+  var vi = jQuery("#masthead_yt");
+  vi.attr("src",vi.data("autoplay-src"));
+});

@@ -110,7 +110,13 @@
             {{ email_form.csrf_token }}
             {{ email_form.email(class="input", placeholder="EMAIL ADDRESS") }}
             <input type="submit" name="submit" value="Subscribe" class="cta" />
-            <div class="response-msg"></div>
+            {% if email_form.email.errors %}
+              <div class="response-msg">
+                {% for error in email_form.email.errors %}
+                  {{ error }}<br>
+                {% endfor %}
+              </div>
+            {% endif %}
           </form>
         </div>
 
@@ -135,7 +141,24 @@
     <script type="text/javascript" src="/static/js/vendor/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
     <script type="text/javascript" src="/static/js/vendor/fadeSlideShow.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/jquery.mw.js"></script>
     <script type="text/javascript" src="/static/js/main.js"></script>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <script type="text/javascript">
+          jQuery(document).ready(function() {
+            mw_load('<div class="flashes">' +
+                     '<a href="#" class="mw_close">OK</a>' +
+                     {% for message in messages %}
+                       '{{ message }}' +
+                     {% endfor %}
+                    '</div>'
+            );
+          });
+        </script>
+      {% endif %}
+    {% endwith %}
 
   </body>
 </html>

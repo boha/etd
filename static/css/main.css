@@ -249,7 +249,7 @@ a.cta {
   font-size: 1.4em;
   font-weight: 600;
   padding: 15px 25px;
-  border: 2px solid #444; !important
+  border: 2px solid #444 !important;
 }
 
 a.cta:hover {
@@ -271,7 +271,7 @@ input.cta[type=submit] {
 }
 
 input.cta {
-  border: 1px solid #666; !important
+  border: 1px solid #666 !important;
 }
 
 input.cta:hover {
@@ -281,6 +281,16 @@ input.cta:hover {
 
 input[type=email].input {
   width: 180px;
+}
+
+.response-msg {
+  margin: 8px auto 0;
+  padding: 8px;
+  width: 304px;
+  border: 1px solid #00529b;
+  color: #00529b;
+  background-color: #BDE5F8;
+  font-size: 0.8em;
 }
 
 #footer-container h2 {
@@ -305,6 +315,10 @@ input[type=email].input {
 #footer-container .fb-like {
   display: block;
   margin: 20px auto;
+}
+
+.flashes .mw_close {
+  float: right;
 }
 
 

@@ -1,5 +1,5 @@
 # Flask
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 # Meta
 from database import init_db, db_session
@@ -46,7 +46,7 @@ def subscribe():
       db_session.add(sub)
       db_session.commit()
 
-    # TODO: flash message?
+    flash("Thanks! You've been subscribed.")
     return redirect(url_for('index'))
 
 

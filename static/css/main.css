@@ -280,8 +280,9 @@ input.cta:hover {
   color: #fff;
 }
 
-input[type=text].input {
+input[type=email].input {
   width: 180px;
+  text-transform: uppercase;
 }
 
 #footer-container h2 {

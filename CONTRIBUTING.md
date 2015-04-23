@@ -20,8 +20,10 @@ Rad. Install depedencies.
 
     pip install -r requirements.txt
 
+You will need a database called `earntheday`. Once you've made that, copy `etd.sample.ini` to `etd.ini` and fill with appropriate values.
+
 As the great philosopher Edan once said, "Run That Shit":
 
     python application.py
 
-[http://localhost:5000](http://localhost:5000)
+Load [http://localhost:5000](http://localhost:5000)

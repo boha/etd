@@ -1,3 +1,6 @@
+# Hide configuration secrets
+etd.ini
+
 ## https://github.com/github/gitignore/blob/master/Global/VirtualEnv.gitignore
 
 # Virtualenv

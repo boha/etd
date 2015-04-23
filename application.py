@@ -13,8 +13,10 @@ from models import Subscription
 
 ## Setup
 
+from config import settings
+
 app = Flask(__name__)
-app.secret_key = "asd252rg242tqwf5y6h4wefefa"
+app.secret_key = settings.SECRET_KEY
 CsrfProtect(app)
 init_db()
 

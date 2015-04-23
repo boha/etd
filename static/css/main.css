@@ -174,7 +174,7 @@ p {
 
 #surfday2014 h1, #surfday2014 p {
   color: #efefef;
-c}
+}
 
 #surfday2014 .partner-desc {
   max-width: 380px;
@@ -257,10 +257,6 @@ a.cta:hover {
   color: #666;
 }
 
-/*.email {
-  display: none;
-}*/
-
 input {
   font-size: 0.8em;
   background: #efefef;
@@ -268,6 +264,9 @@ input {
 
 input.cta, input.input {
   padding: 9px 12px;
+  color: #222;
+}
+input.cta[type=submit] {
   color: #efefef;
 }
 
@@ -282,7 +281,6 @@ input.cta:hover {
 
 input[type=email].input {
   width: 180px;
-  text-transform: uppercase;
 }
 
 #footer-container h2 {

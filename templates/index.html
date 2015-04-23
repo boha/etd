@@ -108,7 +108,7 @@
           <h2>Stay in touch:</h2>
           <form id="form-email" action="/subscribe" method="post">
             {{ email_form.csrf_token }}
-            {{ email_form.email(class="input", placeholder="Email address") }}
+            {{ email_form.email(class="input", placeholder="EMAIL ADDRESS") }}
             <input type="submit" name="submit" value="Subscribe" class="cta" />
             <div class="response-msg"></div>
           </form>

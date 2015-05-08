@@ -32,6 +32,15 @@ h1 {
   color: #444;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-family: Signika, sans-serif;
+  font-size: 1em;
+  line-height: 0;
+  font-weight: 300;
+  letter-spacing: .08em;
+}
+
 h3 {
   font-size: 1.1em;
   line-height: 2em;
@@ -47,28 +56,15 @@ h4 {
   letter-spacing: .1em;
 }
 
+h5 {
+  font-size: .8em;
+  font-weight: 300;
+}
+
 p {
   font-size: .8em;
   line-height: 1.7em;
   font-weight: 300;
-  color: #666;
-}
-
-.cta {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.4em;
-  font-weight: 600;
-  letter-spacing: .1em;
-  background: none;
-  border: 2px solid #444; !important
-  white-space: nowrap;
-  padding: 15px 25px;
-}
-
-.cta:hover {
-  border-color: #666;
   color: #666;
 }
 
@@ -134,8 +130,28 @@ p {
 
 #masthead {
   height: 429px;
+  width: 100%;
   background: url('../img/masthead_1020.jpg') no-repeat;
   background-position: right -80px center;
+  text-align: center;
+}
+
+#masthead .cta {
+  margin: 280px auto 0;
+  background-color: rgba(239,239,239,0.7);
+}
+
+#masthead_video {
+  display: none;
+  height: 429px;
+}
+
+#masthead_video iframe {
+  display: block;
+  max-width: 1020px;
+  height: 429px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .intro {
@@ -158,7 +174,7 @@ p {
 
 #surfday2014 h1, #surfday2014 p {
   color: #efefef;
-c}
+}
 
 #surfday2014 .partner-desc {
   max-width: 380px;
@@ -190,7 +206,7 @@ c}
 
 .team {
   text-align: center;
-  padding-top: 80px;
+  padding: 40px 0;
   font-size: .8em;
   line-height: 1.7em;
   font-weight: 300;
@@ -201,10 +217,6 @@ c}
   width: 100%;
   max-width: 500px;
   padding: 20px 0 20px;
-}
-
-.help {
-  padding: 80px 0;
 }
 
 .help-donate {
@@ -224,9 +236,71 @@ c}
   margin: 0 auto;
 }
 
+.cta {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  letter-spacing: .1em;
+}
+
+a.cta {
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 15px 25px;
+  border: 2px solid #444 !important;
+}
+
+a.cta:hover {
+  border-color: #666;
+  color: #666;
+}
+
+input {
+  font-size: 0.8em;
+  background: #efefef;
+}
+
+input.cta, input.input {
+  padding: 9px 12px;
+  color: #222;
+}
+input.cta[type=submit] {
+  color: #efefef;
+}
+
+input.cta {
+  border: 1px solid #666 !important;
+}
+
+input.cta:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+input[type=email].input {
+  width: 180px;
+}
+
+.response-msg {
+  margin: 8px auto 0;
+  padding: 8px;
+  width: 304px;
+  border: 1px solid #00529b;
+  color: #00529b;
+  background-color: #BDE5F8;
+  font-size: 0.8em;
+}
+
+#footer-container h2 {
+  color: #efefef;
+}
+
 #footer-container {
   background-color: #444;
-  padding: 40px 0;
+  margin: 40px 0 0;
+  padding: 20px 0;
   min-height: 80px;
   text-align: center;
 }
@@ -241,6 +315,10 @@ c}
 #footer-container .fb-like {
   display: block;
   margin: 20px auto;
+}
+
+.flashes .mw_close {
+  float: right;
 }
 
 

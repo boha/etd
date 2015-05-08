@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Earn the Day</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" type="text/css" href="/static/css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/helper.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
+    {% include "includes/_ga.html" %}
+  </head>
+
+  <body>
+
+    <div id="nav-container">
+      <a id="logo" href="#">
+        <img src="/static/img/etd_logo_800.png" alt="Earn the Day" />
+      </a>
+      <a href="mailto:contact@earntheday.org?subject=Donation Inquiry" id="donate">Donate</a>
+      <div id="nav">
+        <a href="#intro">About</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#help">How to Help</a>
+      </div>
+    </div> <!-- #nav-container -->
+
+		<div class="hero-container">
+      <div id="masthead" class="clearfix">
+        <a id="masthead_cta" class="cta" href="#">Watch video</a>
+      </div>
+      <div id="masthead_video" class="clearfix">
+        <iframe id="masthead_yt" width="560" height="315" src="https://www.youtube.com/embed/d_dM6XXFhXQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div> <!-- #hero-container -->
+
+    <div class="main-container clearfix">
+      <a name="intro" class="anchor"></a>
+      <div class="intro wrapper clearfix">
+        <h3>Earn the Day is a Bay Area-based nonprofit created to build a trend of achievement within our community’s deserving youth, by rewarding personal improvement with uncommon and exciting outdoor experiences.</h3>
+        <img src="/static/img/divider.png" class="divider" alt="~" />
+        <h5>Our group was first created in memory of a friend who was lost in the ocean. While the initial aim was to teach children ocean safety skills, our mission has grown to be much more. With our partners at the Boys &amp; Girls Club of San Francisco we created a mentorship program for our city's most deserving youth. Each child and their mentor work together to create goals and work together on achieving these goals. Every three months these kids are rewarded with an outdoor event that will expose them to unique experiences that they normally would not be able to enjoy. It is our sincere belief that teaching children to set and attain goals will lead to greater success in their future.</h5>
+      </div> <!-- .intro -->
+
+      <div class="events wrapper clearfix">
+        <a name="events" class="anchor"></a>
+        <div id="surfday2014">
+          <div class="partner-desc">
+            <h1>Surf Day 2014</h1>
+            <p>On September 30, we partnered with Big Dog Surf Camp, Surfrider Foundation, and the Boys &amp; Girls Club of SF. We took twenty kids out for a day of surf and ocean safety&nbsp;instruction.</p>
+          </div>
+          <div class="partner-logo">
+            <img src="/static/img/surfrider_logo.png" alt="Surfrider Foundation of San Francisco" />
+            <img src="/static/img/bgc_logo.png" alt="Boys and Girls Clubs of San Francisco" />
+          </div>
+        </div> <!-- .surfday2014 -->
+
+        <div class="gallery">
+          <img src="/static/img/sd14_gallery_8.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_7.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_6.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_5.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_4.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_3.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_2.jpg" alt="" />
+          <img src="/static/img/sd14_gallery_1.jpg" alt="" />
+        </div>
+
+      </div>
+
+      <div class="team wrapper clearfix">
+        <a name="team" class="anchor"></a>
+        <h1>Who we are</h1>
+        <img src="/static/img/team.jpg" alt="Four guys on a beach" />
+        <h4>From left to right:</h4>
+        <p>
+          <span class="strong">Parker Sapp:</span> Media and Technology Guy, the group's best surfer<br />
+          <span class="strong">Carl Boehm:</span> President and Secretary, master of lists and partnerships<br />
+          <span class="strong">Brady Haugh:</span> Vice President, the smartest one in the group<br />
+          <span class="strong">Pete Agnoletti:</span> Legal Counsel, man of many hats
+        </p>
+      </div>
+
+      <div class="help wrapper clearfix">
+        <a name="help" class="anchor"></a>
+        <div class="help-img">
+          <img src="/static/img/help.jpg" alt="" />
+        </div>
+
+        <div class="help-donate">
+          <h1>How to Help</h1>
+          <p>We rely on the contributions of corporations and individuals who believe that everybody deserves to be rewarded for their effort.</p>
+          <img src="/static/img/divider.png" class="divider" alt="~" />
+          <a class="cta" href="mailto:contact@earntheday.org?subject=Donation Inquiry">Donate Now</a>
+        </div>
+      </div>
+
+    </div> <!-- .main-container -->
+
+    <div id="footer-container" class="clearfix">
+      <footer class="wrapper">
+
+        <div class="email clearfix">
+          <h2>Stay in touch:</h2>
+          <form id="form-email" action="/subscribe" method="post">
+            {{ email_form.csrf_token }}
+            {{ email_form.email(class="input", placeholder="EMAIL ADDRESS") }}
+            <input type="submit" name="submit" value="Subscribe" class="cta" />
+            {% if email_form.email.errors %}
+              <div class="response-msg">
+                {% for error in email_form.email.errors %}
+                  {{ error }}<br>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </form>
+        </div>
+
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        <a href="#intro">About</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#help">How to Help</a>
+      </footer>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="/static/js/vendor/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/fadeSlideShow.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/jquery.mw.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <script type="text/javascript">
+          jQuery(document).ready(function() {
+            mw_load('<div class="flashes">' +
+                     '<a href="#" class="mw_close">OK</a>' +
+                     {% for message in messages %}
+                       '{{ message }}' +
+                     {% endfor %}
+                    '</div>'
+            );
+          });
+        </script>
+      {% endif %}
+    {% endwith %}
+
+  </body>
+</html>

@@ -78,10 +78,6 @@ textarea {
     width: auto;
 }
 
-.wrapper {
-  overflow: auto;
-}
-
 .invisible {
     visibility: hidden;
 }

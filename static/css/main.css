@@ -54,6 +54,7 @@ h4 {
   font-weight: 600;
   line-height: 0;
   letter-spacing: .1em;
+  margin: 0;
 }
 
 h5 {
@@ -163,44 +164,81 @@ p {
 
 .events {
   background-color: #356491;
-  min-height: 328px;
+  position: relative;
 }
 
-#surfday2014 {
-  padding: 20px 40px 20px;
+.eventdesc {
+  padding: 50px 40px 10px;
   margin: 0 auto;
   max-width: 620px;
+  text-align: center;
 }
 
-#surfday2014 h1, #surfday2014 p {
+.eventdesc h1, .eventdesc h4, .eventdesc p {
   color: #efefef;
 }
 
-#surfday2014 .partner-desc {
-  max-width: 380px;
-  float: left;
+.eventdesc h1 {
+  margin-top: .25em;
 }
 
-#surfday2014 .partner-logo {
-  max-width: 220px;
+.eventdesc .partner-desc {
+}
+
+.eventdesc .partner-logo {
   padding: 20px 0 20px 20px;
-  float: left;
 }
 
-#surfday2014 .partner-logo img {
+.eventdesc .partner-logo img {
   width: 90px;
 }
 
-#surfday2014 .partner-logo img:first-child {
+.eventdesc .partner-logo img:first-child {
   margin-right: 20px;
 }
 
-.gallery {
-  max-width: 620px;
+#tabs-menu {
   margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  top: 3px;
+  text-align: center;
+}
+
+#tabs-menu a {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: #efefef;
+  margin: 0 5px;
+  padding: 3px 8px;
+}
+
+#tabs-menu a.current {
+  background: #efefef;
+  color: #444;
+}
+
+.tab-content {
+  display: none;
+}
+
+#event1 {
+  display: block;
+}
+
+.gallery {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  max-width: 620px;
+  min-height: 200px;
 }
 
 .gallery img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
 }
 
@@ -379,20 +417,39 @@ input[type=email].input {
     margin: 0 auto;
   }
 
-  #surfday2014 {
-    float: left;
-    width: 300px;
+  .events {
+    min-height: 368px;
   }
 
-  #surfday2014 .partner-desc,
-  #surfday2014 .partner-logo {
+  .eventdesc {
+    padding: 40px 40px 10px;
+    text-align: left;
+    max-width: 300px;
+  }
+
+  .eventdesc, #tabs-menu {
+    float: left;
+    clear: left;
+  }
+
+  #tabs-menu {
+    bottom: 3px;
+    top: auto;
+    width: 380px;
+  }
+
+  .eventdesc .partner-desc,
+  .eventdesc .partner-logo
+   {
     width: auto;
     float: none;
     padding: 0;
   }
 
   .gallery {
-    float: right;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .help-donate {

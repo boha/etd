@@ -26,11 +26,34 @@ onSubmitForm = function(e) {
 };
 
 jQuery(document).ready(function(){
-  jQuery('.gallery').fadeSlideShow();
   // $('#form-email').on('submit', onSubmitForm);
   jQuery('#masthead_cta').click(function() {
     jQuery('#masthead').replaceWith($('#masthead_video').show());
     var vi = jQuery("#masthead_yt");
     vi.attr("src",vi.data("autoplay-src"));
   });
+});
+
+// Slideshow
+$('.gallery').each(function(){
+  // scope everything for each slideshow
+  var $this = this;
+  $('> :gt(0)', $this).hide();
+  setInterval(function(){
+    $('> :first-child',$this).fadeOut()
+      .next().fadeIn().end()
+      .appendTo($this);
+  }, 3000);
+});
+
+// Tabs
+$(document).ready(function() {
+    $("#tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).addClass("current");
+        $(this).siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
 });

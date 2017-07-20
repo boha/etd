@@ -43,7 +43,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  line-height: 2em;
+  line-height: 1.5em;
   font-weight: 300;
   color: #666;
 }
@@ -59,6 +59,7 @@ h4 {
 
 h5 {
   font-size: .8em;
+  line-height: 1.5em;
   font-weight: 300;
 }
 
@@ -259,7 +260,7 @@ p {
 
 .help-donate {
   max-width: 540px;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
 }
 
@@ -271,7 +272,7 @@ p {
 
 .help p {
   width: 380px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .cta {
@@ -359,6 +360,14 @@ input[type=email].input {
   float: right;
 }
 
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid green;
+}
 
 /* ==========================================================================
    Media Queries
@@ -445,6 +454,10 @@ input[type=email].input {
     float: none;
     padding: 0;
   }
+
+.eventdesc .partner-logo img {
+  width: 60px;
+}
 
   .gallery {
     display: block;

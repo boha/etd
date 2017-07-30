@@ -3,12 +3,15 @@
 * Python
 * `easy_install`
 * `virtualenv`
+* MySQL
 
 Subsequently:
 
 * Flask
 
 ## Getting Started
+
+If you don't have MySQL installed, go do that first.
 
 Go get `easy_install`. Create a virtual environment and get into it.
 

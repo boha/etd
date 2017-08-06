@@ -1,5 +1,6 @@
 # Hide configuration secrets
 etd.ini
+run.sh
 
 ## https://github.com/github/gitignore/blob/master/Global/VirtualEnv.gitignore
 
@@ -42,4 +43,3 @@ Temporary Items
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-
